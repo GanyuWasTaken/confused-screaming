@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<title>games main page <3 </title>
+<link rel="icon"= type= "image/png" href="https://i.kym-cdn.com/photos/images/newsfeed/001/172/010/6e4.jpg">
+<style>
+
+  body{
+    background-color:#37BEB0;
+  }
+  button{
+    background-color: #F7D6D0;
+  }
+  img{
+    width:400px;
+    height:400px;
+  }
+  table tr{
+    width:100%;
+    height:100%;
+  }
+  table{
+    margin-left: auto;
+    margin-right: auto;
+  }
+.card{
+  background-color:  #006D5B;
+  perspective: 1000px;
+  width: 300px;
+  height: 300px;
+}
+
+.card img{
+  width:  300px;
+  height:  300px;
+}
+
+.inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .inner{
+  transform: rotateY(180deg);
+
+}
+
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  color:  whitesmoke;
+}
+
+.back{
+  background-color: #006D5B;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  background-color:#37BEB0;
+  margin:0;
+  padding:0;
+  min-height: 1000px;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+section img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#diluc{
+width:400px;
+height:200px;
+z-index: 1;
+}
+
+h1{
+  position: relative;
+  font-size: 100px;
+  color: #bdd0e7;
+  z-index: 1;
+  font-family:monospace;
+}
+</style>
+<body>
+
+  <div>
+      <section>
+        <img src ="./bg.jpeg" id = "sky">
+        <img src ="./bg2.png" id = "diluc">
+        <img src ="./nobg1.png" id = "mountains">
+
+          <h1 id = "text"> Top 4 Games</h1>
+
+      </section>
+   <script type = "text/javascript">
+
+       let sky = document.getElementById("sky");
+       let diluc = document.getElementById("diluc");
+       let mountains= document.getElementById("mountains");
+      let text = document.getElementById("text");
+
+      window.addEventListener('scroll', function(){
+        var value = window.scrollY;
+        var ref1 = window.scrollY - 400;
+       sky.style.top = value * 0.5 + 'px';
+         text.style.top = value * 0.5 + 'px';
+        diluc.style.left = value * 0.5 + 'px';
+
+      });
+
+      </script>
+    </div>
+
+
+  <div class ="main">
+<table>
+    <tr>
+  <td>
+<div class="card">
+  <div class="inner">
+    <div class="image">
+ <img src="https://webapp.gameloop.com/syzs_cms/202110/1fih57jui0.27agkblbbrg.webp" class="front">
+</div>
+  <div class="back">
+  <button class="btn" onclick="document.location= './genshin_impact.html'">
+    the more you know UwU</button>
+    </div>
+    </div>
+    </div>
+
+
+
+ </td>
+
+<td>
+<div class="card">
+  <div class="inner">
+    <div class="image">
+  <img src="./MinecraftIcon.png" alt=""class= "front">
+</div>
+<div class="back">
+    <button class="btn" onclick="document.location= './minecraft.html'">
+      the more you know UwU</button>
+    </div>
+  </div>
+</div>
+</td>
+</tr>
+
+
+<tr>
+  <td>
+  <div class="card">
+    <div class="inner">
+      <div class="image">
+   <img src="./unnamed.png" alt=""class= "front">
+ </div>
+<div class="back">
+  <button class="btn" onclick="document.location= './afk_arena.html'">
+    the more you know UwU</button>
+</td>
+
+<td>
+<div class="card">
+  <div class="inner">
+    <div class="image">
+  <img src="./brilliant.jpg" alt=""class= "front">
+</div>
+<div class= "back">
+  <button class="btn" onclick="document.location= './brilliantdiamond.html'">
+    the more you know UwU</button>
+</td>
+</tr>
+</table>
+
+
+
+    </div>
+</body>
+</html>
